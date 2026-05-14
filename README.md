@@ -19,7 +19,7 @@ O Viajei será uma plataforma em que usuários poderão,individualmante,comparti
 - FRONT-END: 
   - HTML;
   - CSS;
-  - Javscript (?)
+  - Javascript (?)
 - BACK-END:
   - PYTHON ou Node ou PhP;
   - SQL;
