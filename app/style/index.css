@@ -44,7 +44,7 @@ header img {
 background-color: rgb(14, 99, 133);
 }
 
- #container section {
+#container section {
     width: 100%;
     height: 80vh;
     background-image: url("../images/hyewon-hwang-l7wPtBcxSDE-unsplash.jpg");
@@ -59,11 +59,11 @@ background-color: rgb(14, 99, 133);
     font-size: 30pt;
     line-height: 110px;
     padding: 20px;
-    box-shadow: 5px 5px 5px 5px rgb(83, 84, 161);
+    box-shadow: 5px 5px 5px 5px rgb(59, 60, 128);
  } 
 
  b:hover {
-    box-shadow: 5px 5px 5px 5px rgb(158, 44, 44);
+    box-shadow: 5px 5px 5px 5px rgb(148, 52, 52);
     transition: box-shadow 2s;
  }
 
