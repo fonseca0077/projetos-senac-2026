@@ -14,18 +14,37 @@
 <body>
     <div id="container">
         <header>
-            <img src="./images/logo.png" alt="" />
-            <div class="toggle"></div>
+             <div class="toggle"></div>
+            <img src="./images/bape.jpg" alt="" />
             <a class="link-do-cabecalho" href="index.html">Viajei</a>
             <a class="link-do-cabecalho" href="./about.html">Sobre</a>
             <a class="link-do-cabecalho" href="forms.html">Histórias</a>
         </header>
 
         <section>
-            <h1>Deixe uma história <span class="material-symbols-outlined">
-                    auto_stories
-                </span></h1>
-            <p></p>
+            <form action="submit">
+
+                <h1>Deixe uma história: <span class="material-symbols-outlined">
+                        auto_stories
+                    </span></h1>
+
+                <label for="usuario">Nome</label>
+                <input type="text" id="usuario" name="Nome">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email">
+
+                 <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="Título">
+
+                <label for="história">história</label>
+                <textarea name="história" id="história" cols="30" rows="10">
+
+                </textarea>
+                
+               
+            </form>
+
         </section>
 
 </body>
