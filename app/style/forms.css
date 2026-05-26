@@ -55,11 +55,11 @@ body {
 }
 
 #container section {
-    background-image: url('../images/montanha.jpg');
+    background-image: url('../images/fundo.blue.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
 
 }
 
@@ -74,19 +74,25 @@ section form {
 }
 
 textarea {
-    width: 700px;
+    width: 70%;
     height: 170px;
     background-color: #6dc5ff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: aliceblue;
+    margin: 0 auto;
 }
 
 input {
-    width: 700px;
+    width: 70%;
     height: 60px;
     background-color: #6dc5ff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: aliceblue;
+    margin: 0 auto;
+}
+
+article.artigo {
+    background-color: lightskyblue;
 }
 
 section h1 {
@@ -113,5 +119,81 @@ section a {
     transition: all 0.2s ease;
     font-family: 'Georgia', serif;
     font-size: 20pt;
+}
+
+@media (max-width: 600px) {
+    /*Media query para ajustar o cabeçalho em aparelhos móveis */
+
+    header img {
+        max-height: 80px;
+
+    }
+
+    #container header {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #container header .toggle {
+        display: block;
+        border-right: 2px solid aquamarine;
+        border-bottom: 2px solid aquamarine;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+
+
+    #container header a {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid rgb(12, 131, 236);
+        position: absolute;
+        z-index: 10;
+    }
+
+    #container header a:nth-of-type(1) {
+        top: 70px;
+    }
+
+    #container header a:nth-of-type(2) {
+        top: 130px;
+    }
+
+    #container header a:nth-of-type(3) {
+        top: 190px;
+    }
+
+    #container header.active .toggle {
+        transform: rotate(225deg);
+        margin-top: 5px;
+    }
+
+    #container header.active a {
+        display: block;
+        background-color: rgb(70, 131, 131);
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        border-top: 1px solid lightblue;
+    }
+
+    #container header.active a:nth-of-type(1) {
+        bottom: 100px;
+    }
+
+    #container header.active a:nth-of-type(2) {
+        bottom: 160px;
+    }
+
+    #container header.active a:nth-of-type(3) {
+        bottom: 220px;
+        border-bottom: 2px solid lightblue;
+    }
+
 }
 

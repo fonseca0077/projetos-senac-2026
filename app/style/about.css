@@ -56,9 +56,9 @@ body {
 
 section {
     width: 100%;
-    height: 80vh;
+    height: 115vh;
     margin: none;
-    background-image: url("../images/montanha.jpg");
+    background-image: url("../images/fundo.blue.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
