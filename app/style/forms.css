@@ -95,6 +95,7 @@ input {
 article.artigo {
     background-color: lightskyblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     color:aliceblue;
     background-image: url(../images/blue.jpg);
     background-repeat: no-repeat;
@@ -131,7 +132,7 @@ section a {
 
 dialog {
     background-color: lightblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     color: black;
     font-size: 15pt;
@@ -147,6 +148,10 @@ dialog {
 label {
     color: aliceblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+dialog#modal::backdrop{
+    background-color: darkblue;
 }
 
 @media (max-width: 600px) {
