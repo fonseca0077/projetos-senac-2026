@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=auto_stories" />
     <script src="./scripts/menu.js" defer></script>
-    <script src="./scripts/form.js" defer></script>
+    <script type="module" src="./scripts/form.js"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
                         auto_stories
                     </span></h1>
 
-                <label for="usuario">Autor</label>
+                <label for="autor">Autor</label>
                 <input type="text" id="autor" name="autor" placeholder="ex:felipe"> 
 
                 <label for="email">Email</label>
@@ -48,6 +48,11 @@
             </form>
 
         </section>
+
+        <dialog id="modal">
+         <button autofocus>Fechar</button>
+         <div id="modal-content"></div>
+        </dialog>
 
         <footer>
             <div id="historias"></div>
