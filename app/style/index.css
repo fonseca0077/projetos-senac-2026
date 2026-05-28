@@ -69,7 +69,7 @@ section h1 {
 section p {
     /* font-style: italic; */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20pt;
+    font-size: 23pt;
     color: aliceblue;
     font-style: italic;
 }
@@ -108,3 +108,4 @@ p {
         max-height: 100px;
     }
 }
+
