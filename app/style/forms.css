@@ -161,7 +161,7 @@ label {
 }
 
 dialog#modal::backdrop{
-    background-color: darkblue;
+    background-color: rgb(122, 74, 74);
 }
 
 form button {
@@ -176,6 +176,8 @@ form button {
     border-radius: 27px;
     align-self: start;
     box-shadow: 0 10px 25px white;
+    cursor: -webkit-grab;
+    margin-left: 15%;
 }
 
 
