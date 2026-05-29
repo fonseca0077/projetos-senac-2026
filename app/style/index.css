@@ -9,6 +9,7 @@ body {
     /* largura*/
     margin: 0;
     /* margem*/
+    overflow-x: hidden;
 }
 
 #container {
@@ -72,6 +73,8 @@ section p {
     font-size: 23pt;
     color: aliceblue;
     font-style: italic;
+    margin: 16px 10px 0px 20px;
+    width: 90%;
 }
 
 

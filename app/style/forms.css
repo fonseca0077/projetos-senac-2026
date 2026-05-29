@@ -12,6 +12,7 @@ body {
     /* largura*/
     margin: 0;
     /* margem*/
+    overflow-x: hidden;
 }
 
 #container {
