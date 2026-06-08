@@ -1,4 +1,4 @@
-################# Exercícios (1ª aula) #################
+################ Exercícios (1ª aula) #################
 
 def calcula_area_triangulo(base: float, altura: float):
     area = (base * altura) / 2
@@ -243,6 +243,22 @@ def remover_brinquedo_seguro(brinquedos: list, item: list):
         return brinquedos
     return 'Este brinquedo não está na lista!'
 
+##########################################################
+numeros_para_trocar = [1,2,3,4]
+
+def trocar_extremos(numeros_para_trocar: list):
+
+    numeros_para_trocar[0], numeros_para_trocar[-1] =  numeros_para_trocar[-1], numeros_para_trocar[0]
+    
+    # ou
+    
+    # numero_comeco = numeros_para_trocar[0]
+    # numeros_para_trocar[0] = numeros_para_trocar[-1]
+    # numeros_para_trocar[-1] = numero_comeco
+
+    return numeros_para_trocar
+
+
 
 if __name__ == '__main__':
     
@@ -323,12 +339,11 @@ if __name__ == '__main__':
 
 
     print("\n Resultado ex 19")
-    brinquedos = remover_brinquedo_seguro(brinquedos, item)
+    brinquedos = remover_brinquedo_seguro(brinquedos, 'pião')
     print(brinquedos)
 
 
     print("\n Resultado ex 20")
+    lista_extremos_trocados = trocar_extremos(numeros_para_trocar)
+    print(lista_extremos_trocados)
 
-
-
-    
