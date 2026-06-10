@@ -14,6 +14,18 @@ class ContaBancaria:
         if self.saldo - valor > 0:
             return True
         return False
+    
+    def transferir(self, conta_destino: "ContaBancaria", valor: float):
+        if self.saldo < valor:
+            return False
+        
+        self.saldo -= valor
+        conta_destino.depositar(valor)
+        return True
+
+    
+
+
 
 
    
