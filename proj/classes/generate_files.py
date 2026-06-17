@@ -1,6 +1,5 @@
 import os
 
-# Define the file templates needed for each exercise
 files_to_create = {
     "poema.txt": (
         "Batatinha quando nasce\n"
@@ -83,10 +82,9 @@ files_to_create = {
     )
 }
 
-# Create files
-os.makedirs('proj/arquivos/exercicios/arquivos/')
+os.makedirs('proj/arquivos/arquivos_teste/')
 for filename, content in files_to_create.items():
-    with open('proj/arquivos/exercicios/arquivos/' + filename, "w", encoding="utf-8") as f:
+    with open('proj/arquivos/arquivos_teste/' + filename, "w", encoding="utf-8") as f:
         f.write(content)
 
 
