@@ -1,16 +1,31 @@
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from http import HTTPStatus
 
-app = FastAPI()
+from fastapi.testclient import TestClient
 
-@app.get('/', response_class=HTMLResponse)
-def exercicio():
-    return """
-<html>
- <head>
-      </head>
-      <body>
-      <h1>Olá mundo</h1>
-      </body>
-</html>
-"""
+from viajei_api.app import app
+
+
+def test_root_deve_retornar_ok_e_ola_mundo():
+    client = TestClient(app)
+
+    response = client.get("/")
+
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {"message": "Bem vindo!"}
+
+
+def test_create_user():
+    client = TestClient(app)
+
+    response = client.post(
+        "/auth/",
+        json={
+            "email": "alice@example.com",
+            "password": "secret",
+        },
+    )
+    assert response.status_code == HTTPStatus.CREATED
+    assert response.json() == {
+        "email": "alice@example.com",
+        "id": 1,
+    }
