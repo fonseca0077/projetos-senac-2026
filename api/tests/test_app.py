@@ -1,12 +1,7 @@
 from http import HTTPStatus
 
-from fastapi.testclient import TestClient
 
-from viajei_api.app import app
-
-
-def test_root_deve_retornar_ok_e_ola_mundo():
-    client = TestClient(app)
+def test_root_deve_retornar_ok_e_ola_mundo(client):
 
     response = client.get("/")
 
@@ -14,8 +9,7 @@ def test_root_deve_retornar_ok_e_ola_mundo():
     assert response.json() == {"message": "Bem vindo!"}
 
 
-def test_create_user():
-    client = TestClient(app)
+def test_create_user(client):
 
     response = client.post(
         "/auth/",
@@ -29,3 +23,26 @@ def test_create_user():
         "email": "alice@example.com",
         "id": 1,
     }
+
+
+def test_read_user(client):
+
+    response = client.get("/users/")
+
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {
+        "users": [
+            {
+                "email": "alice@example.com",
+                "id": 1,
+            }
+        ]
+    }
+
+
+def test_delete_user(client):
+
+    response = client.delete("/users/1")
+
+    response.status_code == HTTPStatus.OK
+    response.json() == {"message": "User deleted!"}
