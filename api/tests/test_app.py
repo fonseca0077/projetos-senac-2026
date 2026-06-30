@@ -46,3 +46,19 @@ def test_delete_user(client):
 
     response.status_code == HTTPStatus.OK
     response.json() == {"message": "User deleted!"}
+
+
+def test_delete_user_not_found(client):
+
+    response = client.delete("/users2/")
+
+    response.status_code == HTTPStatus.NOT_FOUND
+    response.json() == {"detail": "user not found"}
+
+
+def test_user_exercicio(client):
+
+    response = client.get("/users2/")
+
+    response.status_code == HTTPStatus.NOT_FOUND
+    response.json() == {"detail": "user not found"}
